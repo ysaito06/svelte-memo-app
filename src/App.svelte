@@ -2,6 +2,8 @@
 	import { screenType } from "./store/common";
 	import List from "./pages/List.svelte";
 	import Detail from "./pages/Detail.svelte";
+	//import "./assets/css/reset.css";
+	//import "./assets/css/common.css";
 </script>
 
 <style lang="scss">
