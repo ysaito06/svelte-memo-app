@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { screenType } from "./store/common";
 	import List from "./pages/List.svelte";
+	import Detail from "./pages/Detail.svelte";
 </script>
 
 <style lang="scss">
@@ -11,5 +13,9 @@
 
 <main>
 	<h1>メモアプリ</h1>
-	<List />
+	{#if $screenType === 0}
+		<List />
+	{:else if $screenType === 1}
+		<Detail />
+	{/if}
 </main>
