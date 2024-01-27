@@ -1,6 +1,7 @@
 <script lang="ts">
 	import MemoListComponent from "../component/MemoList.svelte";
 	import RegistMemoModal from "../component/modal/RegistMemoModal.svelte";
+	import DeleteMemoModal from "../component/modal/DeleteMemoModal.svelte";
 	import { memoList, showDeleteMemoModalFlg } from "../store/common";
 	import { onMount } from "svelte";
 
@@ -63,4 +64,7 @@
 
 {#if showRegistMemoModalFlg}
 	<RegistMemoModal on:close={closeRegistMemoModal} />
+{/if}
+{#if $showDeleteMemoModalFlg}
+	<DeleteMemoModal />
 {/if}
